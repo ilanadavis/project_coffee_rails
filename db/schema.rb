@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20180326230424) do
     t.integer "new_variable_salary"
     t.integer "new_total_annual_salary"
     t.date "termination_effective_date"
-    t.string "last_day_worked"
+    t.date "last_day_worked"
     t.string "forward_email_to"
     t.string "forward_phone_to"
     t.string "comments"
