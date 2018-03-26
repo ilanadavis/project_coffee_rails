@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hr_form.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @hr_form.email %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @hr_form.phone_number %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @hr_form.title %>
+</p>
+
+<p>
+  <strong>Manager name:</strong>
+  <%= @hr_form.manager_name %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @hr_form.department %>
+</p>
+
+<p>
+  <strong>Hire date:</strong>
+  <%= @hr_form.hire_date %>
+</p>
+
+<p>
+  <strong>Annual base salary:</strong>
+  <%= @hr_form.annual_base_salary %>
+</p>
+
+<p>
+  <strong>Variable salary:</strong>
+  <%= @hr_form.variable_salary %>
+</p>
+
+<p>
+  <strong>Total annual salary:</strong>
+  <%= @hr_form.total_annual_salary %>
+</p>
+
+<p>
+  <strong>Change effective date:</strong>
+  <%= @hr_form.change_effective_date %>
+</p>
+
+<p>
+  <strong>New title:</strong>
+  <%= @hr_form.new_title %>
+</p>
+
+<p>
+  <strong>New manager name:</strong>
+  <%= @hr_form.new_manager_name %>
+</p>
+
+<p>
+  <strong>New annual base salary:</strong>
+  <%= @hr_form.new_annual_base_salary %>
+</p>
+
+<p>
+  <strong>New variable salary:</strong>
+  <%= @hr_form.new_variable_salary %>
+</p>
+
+<p>
+  <strong>New total annual salary:</strong>
+  <%= @hr_form.new_total_annual_salary %>
+</p>
+
+<p>
+  <strong>Termination effective date:</strong>
+  <%= @hr_form.termination_effective_date %>
+</p>
+
+<p>
+  <strong>Last day worked:</strong>
+  <%= @hr_form.last_day_worked %>
+</p>
+
+<p>
+  <strong>Forward email to:</strong>
+  <%= @hr_form.forward_email_to %>
+</p>
+
+<p>
+  <strong>Forward phone to:</strong>
+  <%= @hr_form.forward_phone_to %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @hr_form.comments %>
+</p>
+
+<%= link_to 'Edit', edit_hr_form_path(@hr_form) %> |
+<%= link_to 'Back', hr_forms_path %>

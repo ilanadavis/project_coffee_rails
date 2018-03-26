@@ -1,0 +1,122 @@
+<%= form_with(model: hr_form, local: true) do |form| %>
+  <% if hr_form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hr_form.errors.count, "error") %> prohibited this hr_form from being saved:</h2>
+
+      <ul>
+      <% hr_form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :hr_form_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email, id: :hr_form_email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, id: :hr_form_phone_number %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title, id: :hr_form_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :manager_name %>
+    <%= form.text_field :manager_name, id: :hr_form_manager_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :department %>
+    <%= form.text_field :department, id: :hr_form_department %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hire_date %>
+    <%= form.text_field :hire_date, id: :hr_form_hire_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :annual_base_salary %>
+    <%= form.number_field :annual_base_salary, id: :hr_form_annual_base_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :variable_salary %>
+    <%= form.number_field :variable_salary, id: :hr_form_variable_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_annual_salary %>
+    <%= form.number_field :total_annual_salary, id: :hr_form_total_annual_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :change_effective_date %>
+    <%= form.text_field :change_effective_date, id: :hr_form_change_effective_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_title %>
+    <%= form.text_field :new_title, id: :hr_form_new_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_manager_name %>
+    <%= form.text_field :new_manager_name, id: :hr_form_new_manager_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_annual_base_salary %>
+    <%= form.number_field :new_annual_base_salary, id: :hr_form_new_annual_base_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_variable_salary %>
+    <%= form.number_field :new_variable_salary, id: :hr_form_new_variable_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :new_total_annual_salary %>
+    <%= form.number_field :new_total_annual_salary, id: :hr_form_new_total_annual_salary %>
+  </div>
+
+  <div class="field">
+    <%= form.label :termination_effective_date %>
+    <%= form.text_field :termination_effective_date, id: :hr_form_termination_effective_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_day_worked %>
+    <%= form.text_field :last_day_worked, id: :hr_form_last_day_worked %>
+  </div>
+
+  <div class="field">
+    <%= form.label :forward_email_to %>
+    <%= form.text_field :forward_email_to, id: :hr_form_forward_email_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :forward_phone_to %>
+    <%= form.text_field :forward_phone_to, id: :hr_form_forward_phone_to %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comments %>
+    <%= form.text_field :comments, id: :hr_form_comments %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

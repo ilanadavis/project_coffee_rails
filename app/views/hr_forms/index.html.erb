@@ -1,0 +1,67 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Hr Forms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone number</th>
+      <th>Title</th>
+      <th>Manager name</th>
+      <th>Department</th>
+      <th>Hire date</th>
+      <th>Annual base salary</th>
+      <th>Variable salary</th>
+      <th>Total annual salary</th>
+      <th>Change effective date</th>
+      <th>New title</th>
+      <th>New manager name</th>
+      <th>New annual base salary</th>
+      <th>New variable salary</th>
+      <th>New total annual salary</th>
+      <th>Termination effective date</th>
+      <th>Last day worked</th>
+      <th>Forward email to</th>
+      <th>Forward phone to</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hr_forms.each do |hr_form| %>
+      <tr>
+        <td><%= hr_form.name %></td>
+        <td><%= hr_form.email %></td>
+        <td><%= hr_form.phone_number %></td>
+        <td><%= hr_form.title %></td>
+        <td><%= hr_form.manager_name %></td>
+        <td><%= hr_form.department %></td>
+        <td><%= hr_form.hire_date %></td>
+        <td><%= hr_form.annual_base_salary %></td>
+        <td><%= hr_form.variable_salary %></td>
+        <td><%= hr_form.total_annual_salary %></td>
+        <td><%= hr_form.change_effective_date %></td>
+        <td><%= hr_form.new_title %></td>
+        <td><%= hr_form.new_manager_name %></td>
+        <td><%= hr_form.new_annual_base_salary %></td>
+        <td><%= hr_form.new_variable_salary %></td>
+        <td><%= hr_form.new_total_annual_salary %></td>
+        <td><%= hr_form.termination_effective_date %></td>
+        <td><%= hr_form.last_day_worked %></td>
+        <td><%= hr_form.forward_email_to %></td>
+        <td><%= hr_form.forward_phone_to %></td>
+        <td><%= hr_form.comments %></td>
+        <td><%= link_to 'Show', hr_form %></td>
+        <td><%= link_to 'Edit', edit_hr_form_path(hr_form) %></td>
+        <td><%= link_to 'Destroy', hr_form, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hr Form', new_hr_form_path %>

@@ -1,0 +1,47 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  phone_number: MyString
+  title: MyString
+  manager_name: MyString
+  department: MyString
+  hire_date: MyString
+  annual_base_salary: 1
+  variable_salary: 1
+  total_annual_salary: 1
+  change_effective_date: MyString
+  new_title: MyString
+  new_manager_name: MyString
+  new_annual_base_salary: 1
+  new_variable_salary: 1
+  new_total_annual_salary: 1
+  termination_effective_date: MyString
+  last_day_worked: MyString
+  forward_email_to: MyString
+  forward_phone_to: MyString
+  comments: MyString
+
+two:
+  name: MyString
+  email: MyString
+  phone_number: MyString
+  title: MyString
+  manager_name: MyString
+  department: MyString
+  hire_date: MyString
+  annual_base_salary: 1
+  variable_salary: 1
+  total_annual_salary: 1
+  change_effective_date: MyString
+  new_title: MyString
+  new_manager_name: MyString
+  new_annual_base_salary: 1
+  new_variable_salary: 1
+  new_total_annual_salary: 1
+  termination_effective_date: MyString
+  last_day_worked: MyString
+  forward_email_to: MyString
+  forward_phone_to: MyString
+  comments: MyString
