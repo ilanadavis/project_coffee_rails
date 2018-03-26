@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hire_forms, only:[:new, :create]
   resources :hr_forms
     root 'application#hello'
 
