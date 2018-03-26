@@ -1,102 +1,108 @@
-<%= form_with(model: hire_form, local: true) do |form| %>
-  <% if hire_form.errors.any? %>
+<%= form_with(model: @hr_form, local: true) do |form| %>
+  <% if @hr_form.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(hire_form.errors.count, "error") %> prohibited this hire_form from being saved:</h2>
+      <h2><%= pluralize(@hr_form.errors.count, "error") %> prohibited this hire_form from being saved:</h2>
 
       <ul>
-      <% hire_form.errors.full_messages.each do |message| %>
+      <% @hr_form.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-	<body>
-		<h1>People Action Form</h1>
+
+<form accept-charset="UTF-8" action="hire_forms#new" method="post">
+  <input name="utf8" type="hidden" value="&#x2713;" />
+  <input name="authenticity_token" type="hidden" />
+
+  
+<h1>People Action Form</h1>
 		<h2>Hire Form</h2>
 		    <!-- Field names -->
         <table class="fields">
             <tr>
                 <td>
                     <div class="field">
-                        <label for="name">Full Name:<abbr title="Required">*</abbr></label>
-                        <input type="text" id="name" name="user_name" required></input>
+                        <%= form.label(:name, "Full Name:") %>
+                        <%= form.text_field :name, id: :hr_form_name %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="email">Personal E-mail:<abbr title="Required">*</abbr></label>
-                        <input type="email" id="email" name="user_email" required></input>
+                        <%= form.label(:email, "Personal E-mail:") %>
+                        <%= form.text_field :email, id: :hr_form_email %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="phone">Phone Number:</label> <!-- requires phone number in format of 123-456-7890 -->
-                        <input type="tel" name="phone_number" required pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}"></input>
+                        <%= form.label(:phone_number, "Phone Number:") %>
+                        <%= form.text_field :phone_number, id: :hr_form_phone_number %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="position">Job Title:</label>
-                        <textarea id="position" name="position"></textarea>
+                      <%= form.label(:title, "Job Title:") %>
+                      <%= form.text_field :title, id: :hr_form_title %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="mgr_name">Manager Name:</label>
-                        <textarea id="mgr_name" name="mgr_name"></textarea>
+                      <%= form.label(:manager_name, "Manager Name:") %>
+                      <%= form.text_field :manager_name, id: :hr_form_manager_name %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="department">Department:</label>
-                        <textarea id="department" name="department"></textarea>
+                      <%= form.label(:department, "Department:") %>
+                      <%= form.text_field :department, id: :hr_form_department %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="hire_date">Hire Date:</label>
-                        <input type="date" name="hire_date" required></input>
+                      <%= form.label(:hire_date, "Hire Date:") %>
+                      <%= form.text_field :hire_date, id: :hr_form_hire_date %>
                     </div>
                 </td>
             </tr>
             <tr>
                 <td>
                     <div class="field">
-                        <label for="salary">Annual Base Salary:</label>
-                        <input type="text" name="salary"></input>
+                      <%= form.label(:annual_base_salary, "Annual Base Salary:") %>
+                      <%= form.number_field :annual_base_salary, id: :hr_form_annual_base_salary %>
                     </div>
                 </td>
             </tr>            
                 <td>
                      <div class="field">
-                        <label for="variable">Variable Salary:</label>
-                        <input type="text" name="variable"></input>
+                      <%= form.label(:variable_salary, "Variable Salary:") %>
+                      <%= form.number_field :variable_salary, id: :hr_form_variable_salary %>
                     </div> 
                 </td>
             </tr>                    
                 <td>
                     <div class="field">
-                        <label for="total_salary">Total Annual Salary:</label>
-                        <input type="text" name="total_salary"></input>
+                      <%= form.label(:total_annual_salary, "Total Annual Salary:") %>
+                      <%= form.number_field :total_annual_salary, id: :hr_form_total_annual_salary %>
                     </div>
                 </td>
             </tr>                    
         </table>
-       <!--button to submit--> 
-        <div>
-          <button class="button" type="button" onclick="clickAlert()">Submit</button>
-        </div>
-	</body>
+   <!--button to submit--> 
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+</form>

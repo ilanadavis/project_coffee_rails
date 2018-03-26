@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180326174619) do
+ActiveRecord::Schema.define(version: 20180326230424) do
 
   create_table "hr_forms", force: :cascade do |t|
     t.string "name"
@@ -19,17 +19,17 @@ ActiveRecord::Schema.define(version: 20180326174619) do
     t.string "title"
     t.string "manager_name"
     t.string "department"
-    t.string "hire_date"
+    t.date "hire_date"
     t.integer "annual_base_salary"
     t.integer "variable_salary"
     t.integer "total_annual_salary"
-    t.string "change_effective_date"
+    t.date "change_effective_date"
     t.string "new_title"
     t.string "new_manager_name"
     t.integer "new_annual_base_salary"
     t.integer "new_variable_salary"
     t.integer "new_total_annual_salary"
-    t.string "termination_effective_date"
+    t.date "termination_effective_date"
     t.string "last_day_worked"
     t.string "forward_email_to"
     t.string "forward_phone_to"
