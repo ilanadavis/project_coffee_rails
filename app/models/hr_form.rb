@@ -1,2 +1,4 @@
 class HrForm < ApplicationRecord
+  
+  
 end
