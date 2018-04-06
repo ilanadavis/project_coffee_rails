@@ -5,6 +5,12 @@ class HrFormsControllerTest < ActionDispatch::IntegrationTest
     @hr_form = hr_forms(:one)
   end
 
+
+  test "should get home page" do
+    get root_url(@hr_form)
+    assert_response :success
+  end   
+  
   test "should get index" do
     get hr_forms_url
     assert_response :success
@@ -43,6 +49,7 @@ class HrFormsControllerTest < ActionDispatch::IntegrationTest
       delete hr_form_url(@hr_form)
     end
 
+    
     assert_redirected_to hr_forms_url
   end
 end
