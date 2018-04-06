@@ -56,7 +56,7 @@ class HrFormsController < ApplicationController
   def destroy
     @hr_form.destroy
     respond_to do |format|
-      format.html { redirect_to hr_forms_url, notice: 'Hr form was successfully destroyed.' }
+      format.html { redirect_to hr_forms_url, notice: 'Record was successfully removed.' }
       format.json { head :no_content }
     end
   end
