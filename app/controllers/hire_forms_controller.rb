@@ -22,8 +22,13 @@ class HireFormsController < ApplicationController
     end
   end
   
+    
+
+  
   private
   def hr_form_params
     params.permit(:name, :email, :phone_number, :title, :manager_name, :department, :hire_date, :annual_base_salary, :variable_salary, :total_annual_salary, :change_effective_date, :new_title, :new_manager_name, :new_annual_base_salary, :new_variable_salary, :new_total_annual_salary, :termination_effective_date, :last_day_worked, :forward_email_to, :forward_phone_to, :comments)
   end
+
+  
 end
