@@ -1,9 +1,7 @@
 Rails.application.routes.draw do
-  get 'change_forms/new'
-
-  get 'change_forms/create'
 
   resources :hire_forms, only:[:new, :create]
+  resources :change_forms, only:[:new, :create]
   resources :hr_forms
 
   
